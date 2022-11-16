@@ -19,7 +19,7 @@ export default {
   <div class="container">
 
     <input type="search" placeholder="Search movie" v-model="store.query">
-    <button type="submit" class="btn btn light" @click="$emit('searchData')">Search</button>
+    <button type="submit" class="btn btn-light ms-2" @click="$emit('searchData')">Search</button>
 
   </div>
 

@@ -1,13 +1,19 @@
 <script >
 import { store } from './store.js';
+import AppMain from './components/AppMain.vue';
 export default {
   name: 'App',
   components: {
-    //componenti
+    AppMain,
   },
   data() {
     return {
       store
+    }
+  },
+  methods: {
+    searchCaracters() {
+      console.log('search now');
     }
   },
   mounted() {
@@ -20,6 +26,8 @@ export default {
 </script>
 
 <template>
+
+  <AppMain @searchData="searchCaracters" />
 
 </template>
 
