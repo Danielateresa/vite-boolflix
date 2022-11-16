@@ -8,14 +8,14 @@ export const store = reactive({
     Movies: null,
     categorySearch: null,
     //chiamata ajax
-    CallApi(url) {
+    CallApi() {
         const config = {
             method: 'get',
             url: 'get',
             url: `https://api.themoviedb.org/3/search/movie?api_key=${this.api_Key}&language=en-US&query=${this.query}`,
-            params: {
+            /* params: {
 
-            }
+            } */
 
         };
         axios(config)
