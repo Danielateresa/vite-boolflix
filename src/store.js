@@ -7,7 +7,6 @@ export const store = reactive({
     error: null,
     movies: null,
     page: null,
-    categorySearch: null,
     //chiamata ajax
     CallApi() {
         //console.log('search now');
@@ -17,7 +16,7 @@ export const store = reactive({
         const config = {
             method: 'get',
             url: 'get',
-            url: `https://api.themoviedb.org/3/search/movie?api_key=${store.api_key}&language=en-US&query=${store.query}`,
+            url: `https://api.themoviedb.org/3/search//multi?api_key=${store.api_key}&language=en-US&query=${store.query}&page=1&include_adult=falsehttps://api.themoviedb.org/3/search/tv?api_key=${store.api_key}&page=1&query=${store.query}&include_adult=false`,
             /*     url: `https://api.themoviedb.org/3/search/movie`, */
             /* params: {
                 api_key: '2b45490e9387fca1e16c3bcb3a68dded',

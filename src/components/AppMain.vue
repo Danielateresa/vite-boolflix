@@ -35,13 +35,16 @@ export default {
     <div class="movie_box">
       <ul>
         <li :movie="movie" v-for="movie in store.movies">
-          <p>Titolo: {{ movie.title }}</p>
-          <p>Titolo Originale: {{ movie.original_title }}</p>
+          <p>Titolo: {{ movie.title }} {{ movie.name }}</p>
+          <p>Titolo Originale: {{ movie.original_title }} {{ movie.original_name }}</p>
           <div class="flag">
             <span>Lingua: {{ movie.original_language }}</span>
             <img v-if="movie.original_language === 'en'" src="../assets/img/united-kingdom-flag-xs.png" alt="">
             <img v-else-if="movie.original_language === 'it'" src="../assets/img/italy-flag-xs.png" alt="">
-            <img v-else="movie.original_language === 'ja'" src="../assets/img/japan-flag-xs.png" alt="">
+            <img v-else-if="movie.original_language === 'ja'" src="../assets/img/japan-flag-xs.png" alt="">
+            <img
+              v-else="movie.original_language !== 'ja' && movie.original_language !== 'it' && movie.original_language !== 'en'"
+              src="" alt="">
           </div>
 
           <p>Voto: {{ movie.vote_average }}</p>
