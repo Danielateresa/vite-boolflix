@@ -35,6 +35,8 @@ export default {
     <div class="movie_box">
       <ul>
         <li :movie="movie" v-for="movie in store.movies">
+
+
           <div class="cover_box">
             <img :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" alt="">
           </div>
@@ -49,8 +51,7 @@ export default {
               v-else="movie.original_language !== 'ja' && movie.original_language !== 'it' && movie.original_language !== 'en'"
               src="" alt="">
           </div>
-          <p>Voto: {{ movie.vote_average }}</p>
-
+          <p>Voto: {{ Math.ceil(movie.vote_average / 2) }}</p>
           <!-- /single movie-->
 
         </li>
@@ -64,8 +65,10 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-img {
-  width: 2rem;
-  margin-left: 1rem
+.flag {
+  img {
+    width: 2rem;
+    margin-left: 1rem
+  }
 }
 </style>
