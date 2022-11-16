@@ -18,12 +18,7 @@ export default {
       console.log(this.store.query); 
     }
   },*/
-  mounted() {
-    this.store.CallApi()
-    console.log(this.store);
 
-
-  }
 }
 
 
