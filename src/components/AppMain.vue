@@ -37,8 +37,8 @@ export default {
         <li :movie="movie" v-for="movie in store.movies">
           <p>Titolo: {{ movie.title }}</p>
           <p>Titolo Originale: {{ movie.original_title }}</p>
-          <p>Lingua: {{ movie.original_language }}</p>
           <div class="flag">
+            <span>Lingua: {{ movie.original_language }}</span>
             <img v-if="movie.original_language === 'en'" src="../assets/img/united-kingdom-flag-xs.png" alt="">
             <img v-else-if="movie.original_language === 'it'" src="../assets/img/italy-flag-xs.png" alt="">
             <img v-else="movie.original_language === 'ja'" src="../assets/img/japan-flag-xs.png" alt="">
@@ -54,6 +54,9 @@ export default {
 
 </template>
 
-<style scoped>
-
+<style lang="scss" scoped>
+img {
+  width: 2rem;
+  margin-left: 1rem
+}
 </style>
