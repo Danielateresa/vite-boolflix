@@ -11,15 +11,7 @@ export default {
       store
     }
   },
-  methods: {
-    getFlag() {
-      if (store.movie.original_language === 'en') {
-        const eglishFlag = 'united-kingdom-flag-xs.png';
-      } else if (store.movie.original_language === 'it') {
 
-      }
-    }
-  }
 }
 </script>
 
