@@ -11,14 +11,18 @@ export default {
       store
     }
   },
-  methods: {
+  /*methods: {
     searchCaracters() {
-      console.log('search now');
+       console.log('search now');
+
+      console.log(this.store.query); 
     }
-  },
+  },*/
   mounted() {
     this.store.CallApi()
     console.log(this.store);
+
+
   }
 }
 
@@ -27,7 +31,7 @@ export default {
 
 <template>
 
-  <AppMain @searchData="searchCaracters" />
+  <AppMain @searchData="this.store.CallApi" />
 
 </template>
 
