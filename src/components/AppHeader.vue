@@ -16,7 +16,13 @@ export default {
 </script>
 
 <template>
-    <SearchBox @searchData="this.store.CallApi" />this
+
+    <header class="site_header">
+
+        <SearchBox @searchData="store.CallApi" />
+
+    </header>
+    <!-- /.site_header -->
 
 </template>
 

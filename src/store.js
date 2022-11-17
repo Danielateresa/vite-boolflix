@@ -27,10 +27,10 @@ export const store = reactive({
         axios(config)
             .then(function (response) {
                 console.log((response.data));
-
                 store.movies = response.data.results;
                 /*     this.page = response.data.page; */
                 console.log(store.movies);
+                store.query = '';
             })
             .catch(function (error) {
                 console.log(error);
