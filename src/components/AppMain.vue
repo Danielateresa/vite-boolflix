@@ -2,16 +2,11 @@
 import { store } from '../store.js';
 export default {
   name: 'AppMain',
-  emits: ['searchData'],
-  components: {
-
-  },
   data() {
     return {
       store
     }
   },
-
 }
 </script>
 
@@ -19,11 +14,6 @@ export default {
 
   <div class="container">
 
-    <!-- trasformare in componente SearchComponent-->
-    <input type="search" placeholder="Cosa vuoi guardare?" v-model="store.query">
-    <button type="submit" class="btn btn-light ms-2" @click="$emit('searchData')">Cerca</button>
-
-    <!-- trasformare in componente MovieList/MovieItem-->
     <div class="movie_box">
       <ul>
         <li :movie="movie" v-for="movie in store.movies">
@@ -43,7 +33,7 @@ export default {
               v-else="movie.original_language !== 'ja' && movie.original_language !== 'it' && movie.original_language !== 'en'"
               src="" alt="">
           </div>
-          <p>Voto: {{ Math.ceil(movie.vote_average / 2) }}</p>
+          <p>Voto: {{ Math.ceil(movie.vote_average / 2) }}</p><!-- v-for per stampare in n di stelle? -->
           <!-- /single movie-->
 
         </li>

@@ -1,24 +1,18 @@
 <script >
 import { store } from './store.js';
 import AppMain from './components/AppMain.vue';
+import AppHeader from './components/AppHeader.vue';
 export default {
   name: 'App',
   components: {
     AppMain,
+    AppHeader
   },
   data() {
     return {
       store
     }
-  },
-  /*methods: {
-    searchCaracters() {
-       console.log('search now');
-
-      console.log(this.store.query); 
-    }
-  },*/
-
+  }
 }
 
 
@@ -26,7 +20,8 @@ export default {
 
 <template>
 
-  <AppMain @searchData="this.store.CallApi" />
+  <AppHeader />
+  <AppMain />
 
 </template>
 

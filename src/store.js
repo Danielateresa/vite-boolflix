@@ -11,11 +11,10 @@ export const store = reactive({
     CallApi() {
         //console.log('search now');
 
-        /*  console.log(this.store.query); */
+        //console.log(this.store.query); //
 
         const config = {
             method: 'get',
-            url: 'get',
             url: `https://api.themoviedb.org/3/search//multi?api_key=${store.api_key}&language=en-US&query=${store.query}&page=1&include_adult=falsehttps://api.themoviedb.org/3/search/tv?api_key=${store.api_key}&page=1&query=${store.query}&include_adult=false`,
             /*     url: `https://api.themoviedb.org/3/search/movie`, */
             /* params: {
