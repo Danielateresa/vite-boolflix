@@ -8,6 +8,7 @@ export const store = reactive({
     movies: null,
     page: null,
     stars: [],
+    /* showInfo: false, */
     //chiamata ajax
     CallApi() {
         //console.log('search now');
