@@ -9,6 +9,7 @@ export default {
     }
   },
 }
+
 </script>
 
 <template>
@@ -36,7 +37,9 @@ export default {
                   src="" alt="">
               </div>
               <p>Voto:
-                <font-awesome-icon icon="fa-solid fa-user-secret" />{{ Math.ceil(movie.vote_average / 2) }}
+                <font-awesome-icon icon="fa-solid fa-star" v-for="(i) in 5"
+                  :class="Math.ceil(movie.vote_average / 2) > i ? 'on' : ''" />
+
               </p>
             </div>
             <!-- /.single_movie-->
@@ -58,5 +61,9 @@ export default {
     width: 2rem;
     margin-left: 1rem
   }
+}
+
+.on {
+  color: yellow;
 }
 </style>

@@ -7,6 +7,7 @@ export const store = reactive({
     error: null,
     movies: null,
     page: null,
+    stars: [],
     //chiamata ajax
     CallApi() {
         //console.log('search now');
@@ -36,5 +37,7 @@ export const store = reactive({
                 console.log(error);
             });
 
-    }
+    },
+
+
 })
