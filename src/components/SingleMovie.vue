@@ -1,4 +1,8 @@
 <script>
+import langEN from '../assets/img/united-kingdom-flag-xs.png';
+import langIT from '../assets/img/italy-flag-xs.png';
+import langJA from '../assets/img/japan-flag-xs.png';
+
 export default {
     name: 'SingleMovie',
     props: {
@@ -7,9 +11,9 @@ export default {
     data() {
         return {
             lang: {
-                en: '../assets/img/united-kingdom-flag-xs.png',
-                it: '../assets/img/italy-flag-xs.png',
-                ja: '../assets/img/japan-flag-xs.png',
+                en: langEN,
+                it: langIT,
+                ja: langJA,
             },
             imageUrl: 'https://image.tmdb.org/t/p/',
         }
@@ -23,7 +27,7 @@ export default {
             } else if (lang === 'ja') {
                 return this.lang.ja
             } else {
-                return 'ciao'
+                return ''
             }
         }
     }
@@ -46,7 +50,7 @@ export default {
                 <p><span>Titolo Originale: </span>{{ movie.original_title }} {{ movie.original_name }}</p>
                 <div class="flag">
                     <span>Lingua: {{ movie.original_language }}</span>
-                    <img :src="getFlag(movie.original_language)" alt="">
+                    <img :src="getFlag(movie.original_language)" :alt="movie.original_language">
                 </div>
                 <p><span>Voto: </span>
                     <font-awesome-icon icon="fa-solid fa-star" v-for="(i) in 5"
