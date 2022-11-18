@@ -17,7 +17,7 @@ export default {
 <template>
 
     <div class="movie_box ">
-        <div class="row flex-nowrap overflow-hidden">
+        <div class="row overflow-hidden">
 
             <SingleMovie :movie="movie" v-for="movie in store.movies" />
 

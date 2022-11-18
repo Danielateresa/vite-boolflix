@@ -17,7 +17,7 @@ export default {
 
 <template>
 
-    <header class="site_header">
+    <header class="site_header shadow-lg pt-2">
         <nav class="py-2 px-4 d-flex justify-content-between">
             <div class="left_nav">
                 <img src="../assets/img/netflix-2015-logo.svg" alt="">
@@ -30,7 +30,7 @@ export default {
             </div>
             <!-- /.left_nav -->
 
-            <div class="right_nav">
+            <div class="right_nav d-flex align-items-center pb-1">
                 <SearchBox @searchData="store.CallApi" />
             </div>
             <!-- /.right_nav -->
@@ -43,6 +43,16 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/scss/partials/variables' as*;
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $dark;
+    z-index: 2;
+}
+
 img {
     width: 100px;
 }

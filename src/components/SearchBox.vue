@@ -12,14 +12,16 @@ export default {
 </script>
 
 <template>
-    <div class="search_box">
-        <input type="search" placeholder="Cosa vuoi guardare?" v-model="store.query" @keyup.enter="$emit('searchData')">
-        <button type="submit" class="btn btn-light ms-2" @click="$emit('searchData')">Cerca</button>
+    <div class="search_box d-flex align-items-center">
+        <input class="rounded border-0 p-1" type="search" placeholder="Cosa vuoi guardare?" v-model="store.query"
+            @keyup.enter="$emit('searchData')">
+        <button type="submit" class="btn btn-light ms-2 rounded border-0 px-2 py-1"
+            @click="$emit('searchData')">Cerca</button>
     </div>
 
 </template>
 
 
-<style>
+<style lang="scss" scoped>
 
 </style>

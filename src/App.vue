@@ -2,11 +2,13 @@
 import { store } from './store.js';
 import AppMain from './components/AppMain.vue';
 import AppHeader from './components/AppHeader.vue';
+import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'App',
   components: {
     AppMain,
-    AppHeader
+    AppHeader,
+    AppFooter
   },
   data() {
     return {
@@ -22,6 +24,7 @@ export default {
 
   <AppHeader />
   <AppMain />
+  <AppFooter />
 
 </template>
 
